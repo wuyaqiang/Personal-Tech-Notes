@@ -17,6 +17,7 @@ ArrayList和Vector，在主线程中new一个非线程安全的ArrayList，然�
 1000  
 998  
 959  
+
 可见，有些情况下，最终ArrayList大小并不是1000，有些是正确的1000个(因为非线程安全并不是每次都会导致问题)，有时候还会抛出异常。  
 所以ArrayList是非线程安全的，但是当我们在主线程中new的是Vector对象，则后面的测试结果全部是正确的，即Vector是线程安全的，HashTable和StringBuffer同理。
   
